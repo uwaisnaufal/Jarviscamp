@@ -1,2 +1,2 @@
 # Jarviscamp
-Repository to store my weekly assignment in Web Dev Jarviscamp
+Repository to store my assignment in Web Dev Jarviscamp

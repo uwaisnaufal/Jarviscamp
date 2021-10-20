@@ -73,7 +73,7 @@
             // Code kamu mulai dari sini
             let hasil = num1 * num2;
             // Tampilkan jawaban dengan cara document.getElementById("jawaban2").innerHTML seperti di CONTOH
-            document.getElementById("jawaban2").innerHTML = hasil;
+            return document.getElementById("jawaban2").innerHTML = hasil;
         }
 
 
@@ -100,7 +100,11 @@
 
         function buatKalimat(nama, umur, alamat, hobi) {
             // Code kamu mulai dari sini
-            document.getElementById("jawaban3").innerHTML = "Nama saya " + nama + ", umur saya " + umur + " tahun, alamat saya di " + alamat + ", dan saya punya hobby yaitu " + hobi + "!";
+            let bio1 = "Nama saya " + nama;
+            let bio2 = ", umur saya " + umur + " tahun";
+            let bio3 = ", alamat saya di " + alamat;
+            let bio4 = ", dan saya punya hobby yaitu " + hobi + "!";
+            return document.getElementById("jawaban3").innerHTML = bio1 + bio2 + bio3 + bio4;
             // Tampilkan dengan cara document.getElementById("jawaban3").innerHTML seperti di CONTOH.
         }
 

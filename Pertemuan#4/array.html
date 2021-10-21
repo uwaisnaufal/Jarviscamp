@@ -42,10 +42,9 @@
         // Code Kamu di sini
 
         function balikString(kalimat) {
-            let kata = kalimat; //Masukin parameter kalimat ke dalam kata buat dipakai nanti
             let kalimatBalik = ""; //Buat variabel kosong untuk nanti menaruh kata per kata nya nanti
             for (let i = kalimat.length - 1; i >= 0; i--) {  //Buat variabel i sebagai index array, lalu masukkan panjang string kalimat sebagai nilai i, lalu dikurangi 1, karena index array dimulai dari 0. Sip... PAHAM AKHIRNYA!
-                kalimatBalik += kata [i]; //Masukkan nilai pada kalimatBalik yang diambil dari index array kata sesuai dengan nilai i.
+                kalimatBalik += kalimat [i]; //Masukkan nilai pada kalimatBalik yang diambil dari index array kata sesuai dengan nilai i.
             }
             return kalimatBalik; //Selesai~
         }
@@ -106,7 +105,7 @@
         ]
         // Code kamu di sini, lakukan looping terhadap input di atas
         function dataHandling(biodata) {
-            var hasil = "";
+            let hasil = "";
             biodata.forEach(function bio(data) {
                 hasil +=
                 "Nomor ID: " + data[0] + "<br>" +

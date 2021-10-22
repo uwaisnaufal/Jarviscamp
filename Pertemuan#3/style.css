@@ -1,0 +1,92 @@
+
+
+.has-search .form-control {
+    padding-left: 2.375rem;
+}
+
+.has-search .form-control-feedback {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    width: 2.375rem;
+    height: 2.375rem;
+    line-height: 2.375rem;
+    text-align: center;
+    pointer-events: none;
+    color: #aaa;
+}
+
+.navbar-nav > li > a:hover, .navbar-nav > li > a:focus {
+    color: rgb(122, 53, 155) !important;
+}
+
+.nav-pills li {
+    padding-right: 2rem;
+    padding-left: 2rem;
+}
+
+.nav-pills a {
+    color: rgb(68, 68, 68);
+}
+
+.nav-pills a:focus {
+    color: rgb(122, 53, 155);
+}
+
+.nav-pills > li > a:hover {
+    background-color: #d6b9e9;
+    color: rgb(122, 53, 155);
+}
+
+.nav-pills > li, .nav-down {
+    padding: 0%;
+}
+
+.list-group > li, .list-group > a {
+    border: none;
+    background-color: #d6b9e9;
+    margin: 5px;
+}
+
+.list-group > a {
+    color: rgb(68, 68, 68);
+    font-weight: bold;
+}
+
+.list-group > a:hover {
+    background-color: #b88bd6;
+}
+
+.fw-bold {
+    color: rgb(68, 68, 68);
+}
+
+.badge, .card > .card-body > a{
+    background-color: rgb(86, 11, 129) !important;
+    border: none;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+  height: 100px;
+  width: 100px;
+  outline: black;
+  background-size: 100%, 100%;
+  background-image: none;
+}
+
+.carousel-control-next-icon:after
+{
+  content: '>';
+  font-size: 55px;
+  color: rgb(86, 11, 129);
+}
+
+.carousel-control-prev-icon:after {
+  content: '<';
+  font-size: 55px;
+  color: rgb(86, 11, 129)
+}
+
+.carousel-item > img {
+    height: 300px;
+}

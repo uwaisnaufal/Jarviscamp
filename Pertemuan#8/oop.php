@@ -27,18 +27,6 @@
 
         public $jump = "Hop Hop!";
 
-        function __construct($name) {
-            $this->name = $name;
-        }
-
-        function get_legs() {
-            return $this->legs;
-        }
-        
-        function get_cold_blooded() {
-            return $this->cold_blooded;
-        }
-
         function get_jump() {
             return $this->jump;
         }
@@ -48,18 +36,7 @@
     class Ape extends Animal {
 
         public $yell = "Auooo!";
-
-        function __construct($name) {
-            $this->name = $name;
-        }
-
-        function get_legs() {
-            return $this->legs = 2;
-        }
-        
-        function get_cold_blooded() {
-            return $this->cold_blooded;
-        }
+        public $legs = 2;
 
         function get_yell() {
             return $this->yell;

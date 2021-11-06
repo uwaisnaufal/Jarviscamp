@@ -2,9 +2,9 @@
 
     class Animal {
 
-        public $name;
-        public $legs = 4;
-        public $cold_blooded = "no";
+        protected $name;
+        protected $legs = 4;
+        protected $cold_blooded = "no";
 
         function __construct($name) {
             $this->name = $name;
@@ -25,7 +25,7 @@
 
     class Frog extends Animal {
 
-        public $jump = "Hop Hop!";
+        private $jump = "Hop Hop!";
 
         function get_jump() {
             return $this->jump;
@@ -35,8 +35,8 @@
 
     class Ape extends Animal {
 
-        public $yell = "Auooo!";
-        public $legs = 2;
+        private $yell = "Auooo!";
+        protected $legs = 2;
 
         function get_yell() {
             return $this->yell;

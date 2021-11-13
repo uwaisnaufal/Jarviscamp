@@ -1,0 +1,47 @@
+     -- Nomor 1 --
+     1. CREATE DATABASE myshop;                                                         <-- Membuat Database "myshop"
+     
+     -- Nomor 2 --
+     2. USE myshop;                                                                     <-- masuk dan menggunakan Database "myshop"
+     3. CREATE TABLE users (                                                            <-- Membuat tabel "users"
+         id int NOT NULL AUTO_INCREMENT,                                                <-- memasukkan field "id" dengan tipe data "integer" di mana id tidak akan bernilai NULL dan akan otomatis bernilai 1 di awal, dan ditambah 1 tiap ada row baru
+         name varchar(255),                                                             <-- memasukkan field "name" dengan tipe data "varchar(255)"
+         email varchar(255),                                                            <-- memasukkan field "email" dengan tipe data "varchar(255)"
+         password varchar(255),                                                         <-- memasukkan field "password" dengan tipe data "varchar(255)"
+         PRIMARY KEY (id)                                                               <-- Menjadikan field "id" sebagai identitas dari 1 row/baris 
+        );                         
+     4. CREATE TABLE categories (                                                       <-- Membuat tabel "categories"
+         id int NOT NULL AUTO_INCREMENT,                                                <-- memasukkan field "id" dengan tipe data "integer" di mana id tidak akan bernilai NULL dan akan otomatis bernilai 1 di awal, dan ditambah 1 tiap ada row baru
+         kategori varchar(255),                                                         <-- memasukkan field "kategori" dengan tipe data "varchar(255)"
+         PRIMARY KEY (id)                                                               <-- Menjadikan field "id" sebagai identitas dari 1 row/baris 
+        );
+     5. CREATE TABLE items (                                                            <-- Membuat tabel "items"
+         id int NOT NULL AUTO_INCREMENT,                                                <-- memasukkan field "id" dengan tipe data "integer" di mana id tidak akan bernilai NULL dan akan otomatis bernilai 1 di awal, dan ditambah 1 tiap ada row baru
+         name varchar(255),                                                             <-- memasukkan field "name" dengan tipe data "varchar(255)"
+         description varchar(255),                                                      <-- memasukkan field "description" dengan tipe data "varchar(255)"
+         price int,                                                                     <-- memasukkan field "price" dengan tipe data "integer"
+         stock int,                                                                     <-- memasukkan field "stock" dengan tipe data "integer"
+         category_id int,                                                               <-- memasukkan field "category_id" dengan tipe data "integer"
+         PRIMARY KEY (id),                                                              <-- Menjadikan field "id" sebagai identitas dari 1 row/baris
+         FOREIGN KEY (category_id) REFERENCES categories(id)                            <-- Menjadikan field "category_id" mengikuti nilai dari tabel "categories" 
+        );
+        
+     -- Nomor 3 --
+     6. INSERT INTO users (name, email, password) 
+        VALUES ('John Doe', 'john@doe.com', 'john123'), 
+        ('Jane Doe', 'jane@doe.com', 'jenita123');                                      <-- Masukin nilai ke users
+     7. INSERT INTO categories (kategori) 
+        VALUES ('gadget'), ('cloth'), ('men'), ('women'), ('branded');                  <-- Masukin nilai ke categories
+     8. INSERT INTO items (name, description, price, stock, category_id) 
+        VALUES ('Sumsang B50', 'HP Keren dari merk Sumsang', 4000000, 100, 1), 
+        ('Uniklooh', 'Baju keren dari brand ternama', 500000, 50, 2), 
+        ('IMHO Watch', 'Jam tangan anak yang jujur banget', 2000000, 20, 1);            <-- Masukin nilai ke items
+    
+     -- Nomor 4 --
+     9. SELECT id, name, email FROM users;                                              <-- Nampilin isi tabel users tanpa pass
+     10. SELECT * FROM items WHERE price > 1000000;                                     <-- Nampilin isi tabel items yang berharga lebih dari 1juta
+     11. SELECT * FROM items WHERE name LIKE '%sang%';                                  <-- Nampilin isi tabel items yang nama barang nya memiliki kata 'sang'
+     12. SELECT * FROM items INNER JOIN categories ON items.category_id=categories.id;  <-- Nampilin isi tabel items + kategori item nya
+     
+     -- Nomor 5 --
+     13. UPDATE items SET price = 2500000 WHERE id=1;                                   <-- Ngubah harga Sumsang dari 4juta jadi 2.5juta
